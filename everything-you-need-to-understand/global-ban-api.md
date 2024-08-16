@@ -26,7 +26,7 @@ local Players = game:GetService("Players")
 Players.PlayerAdded:Connect(function(Player)
     if OpenAC.Methods:IsUserGlobalBanned(Player) then
         Player:Kick("Please rejoin.")
-        Player:BanAsync({
+        Players:BanAsync({
             UserIds = {Player.UserId},
             Duration = -1, --// Permanent Ban
             DisplayReason = "You have been banned permanentely for Cheating in another experience. Please contact us if you believe this is incorrect.",
@@ -55,7 +55,7 @@ OpenAC.Signals.OnDetection:Connect(function(Player, Detection, IsCustomDetection
     end
 
     Player:Kick("Please rejoin.")
-    Player:BanAsync({
+    Players:BanAsync({
         UserIds = {Player.UserId},
         Duration = -1, --// Permanent Ban
         DisplayReason = "You have been banned permanentely for Cheating. Please contact us if you believe this is incorrect.",
