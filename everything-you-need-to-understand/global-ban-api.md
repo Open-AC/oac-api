@@ -25,13 +25,7 @@ local Players = game:GetService("Players")
 
 Players.PlayerAdded:Connect(function(Player)
     if OpenAC.Methods:IsUserGlobalBanned(Player) then
-        Player:Kick("Please rejoin.")
-        Players:BanAsync({
-            UserIds = {Player.UserId},
-            Duration = -1, --// Permanent Ban
-            DisplayReason = "You have been banned permanentely for Cheating in another experience. Please contact us if you believe this is incorrect.",
-            PrivateReason = "OpenAC Global Ban: " .. Detection
-        })
+        Player:Kick("You have been flagged as an exploiter by our AntiCheat provider. Please contact us on our communication server if you believe this is incorrect.")
     end
 end)
 
@@ -58,7 +52,7 @@ OpenAC.Signals.OnDetection:Connect(function(Player, Detection, IsCustomDetection
     Players:BanAsync({
         UserIds = {Player.UserId},
         Duration = -1, --// Permanent Ban
-        DisplayReason = "You have been banned permanentely for Cheating. Please contact us if you believe this is incorrect.",
+        DisplayReason = "You have been banned permanently for 'Exploiting'. Please contact us if you believe this is incorrect.",
         PrivateReason = "Automatic AntiCheat Ban: " .. Detection
     })
 end)
