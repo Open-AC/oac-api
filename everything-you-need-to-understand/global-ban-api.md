@@ -8,7 +8,7 @@ coverY: 0
 The Global Ban API is a system made for OpenAC Consumers to ban previous offenders by saving them into a database of known cheaters. By default, OpenAC will contribute to the service by sending a request to our own Web API with your own SECRET API Key in order to authenticate your request. For security reasons, please do not share the URL that is located in the `ModuleScript` where the API is implemented, OR your API Key.
 
 {% hint style="danger" %}
-Please note that if we find out that any part of OpenAC has been leaked, we will be forced to blacklist you, for security reasons, from OpenAC entirely, this means removing your API Key as well. Abusing the API to report non-exploiters will also result in a blacklist.
+Please note that if we find out that any part of OpenAC has been leaked and the leak traces back to you, we will be, for security reasons, forced to blacklist you from OpenAC entirely, this means removing your API Key as well. Abusing the API to report non-exploiters will also result in a blacklist.
 {% endhint %}
 
 ***
